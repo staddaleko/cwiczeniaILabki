@@ -50,7 +50,7 @@ namespace Powtorka
         //public override void Rysuj2()
         public new void Rysuj2()//zobaczmy co sie stanie jak zmienimy 'override' na 'new' //w wyniku wyswietli sie 'czworokat', a nie 'kwadrat'. Wyswietlamy to co jest w funkcji bazowej.
         {
-            Console.WriteLine("Tu kwadrat z Wrocławia (override)");
+            Console.WriteLine("Tu kwadrat z Wrocławia (override zastąpione przez 'new')");
         }
 
     }
