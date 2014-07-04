@@ -21,9 +21,18 @@ namespace Dziurka
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ShowDialog();
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
             GraphicsPath sciezka = new GraphicsPath();
             sciezka.AddEllipse(0, 0, this.Width, this.Height);
-            sciezka.AddEllipse(40, 40, Width-80, Height-80);
+            sciezka.AddEllipse(40, 40, Width - 80, Height - 80);
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;
+            sf.LineAlignment = StringAlignment.Center;
+            sciezka.AddString("Koniec", FontFamily.GenericSansSerif, 2, 34, ClientRectangle,sf);
             Region = new Region(sciezka);
         }
     }
