@@ -28,20 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.figuryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prostokatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.figuryToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(616, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // figuryToolStripMenuItem
+            // 
+            this.figuryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.elipsaToolStripMenuItem,
+            this.prostokatToolStripMenuItem});
+            this.figuryToolStripMenuItem.Name = "figuryToolStripMenuItem";
+            this.figuryToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.figuryToolStripMenuItem.Text = "Figury";
+            // 
+            // elipsaToolStripMenuItem
+            // 
+            this.elipsaToolStripMenuItem.Name = "elipsaToolStripMenuItem";
+            this.elipsaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.elipsaToolStripMenuItem.Tag = "elipsa";
+            this.elipsaToolStripMenuItem.Text = "Elipsa";
+            this.elipsaToolStripMenuItem.Click += new System.EventHandler(this.Utworz_Figure_Click);
+            // 
+            // prostokatToolStripMenuItem
+            // 
+            this.prostokatToolStripMenuItem.Name = "prostokatToolStripMenuItem";
+            this.prostokatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.prostokatToolStripMenuItem.Tag = "prostokąt";
+            this.prostokatToolStripMenuItem.Text = "Prostokąt";
+            this.prostokatToolStripMenuItem.Click += new System.EventHandler(this.Utworz_Figure_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 523);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem figuryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elipsaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prostokatToolStripMenuItem;
     }
 }
 

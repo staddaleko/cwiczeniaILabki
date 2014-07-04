@@ -16,5 +16,10 @@ namespace GIMP1
         {
             InitializeComponent();
         }
+
+        private void Utworz_Figure_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
