@@ -10,40 +10,36 @@ namespace Powtorka
     {
         public void Rysuj1()
         {
-            Console.WriteLine("Tu Figura");
+            Console.WriteLine("Tu Figura");//tu jest typ zmiennej wazniejszy (podana jest w 'Main'). Zawsze z tej klasy, z której jest zmienna
         }
         public virtual void Rysuj2()
         {
-            Console.WriteLine("Tu Figura");
+            Console.WriteLine("Tu Figura"); //nie jest wazny typ zmiennej, tylko typ obiektu przy zmiennej wirtualnej
         }
 
     }
     class Kolo:Figura
     {
-        public override void Rysuj2()
-        {
-            Console.WriteLine("Tu koło z Wrocławia (new)");
-        }
-
         public new void Rysuj1()
         {
-            Console.WriteLine("Tu koło z Łodzi (override)");
+            Console.WriteLine("Tu koło z Łodzi (new)");
         }
-
+        public override void Rysuj2()
+        {
+            Console.WriteLine("Tu koło z Wrocławia (override)");
+        }
 
     }
     class Kwadrat : Figura
     {
-        public override void Rysuj2()
-        {
-            Console.WriteLine("Tu kwadrat z Wrocławia (new)");
-        }
-
         public new void Rysuj1()
         {
-            Console.WriteLine("Tu kwadrat z Łodzi (override)");
+            Console.WriteLine("Tu kwadrat z Łodzi (new)");
         }
-
+        public override void Rysuj2()
+        {
+            Console.WriteLine("Tu kwadrat z Wrocławia (override)");
+        }
 
     }
     class Program
@@ -60,7 +56,14 @@ namespace Powtorka
         
         static void Main(string[] args)
         {
-            Figura zmienna;
+            Figura zmienna;//gdyby była zmienna typu 'Kolo', wtedy by wyswietlalo "kolo"
+            Console.WriteLine("Jaka figura?: ");
+            string s = Console.ReadLine();
+
+            zmienna = Utworz(s);
+            zmienna.Rysuj1();
+            zmienna.Rysuj2();
+            Console.ReadKey();
 
         }
     }
