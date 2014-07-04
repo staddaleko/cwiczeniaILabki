@@ -23,6 +23,8 @@ namespace Dziurka
         {
             GraphicsPath sciezka = new GraphicsPath();
             sciezka.AddEllipse(0, 0, this.Width, this.Height);
+            sciezka.AddEllipse(40, 40, Width-80, Height-80);
+            Region = new Region(sciezka);
         }
     }
 }
