@@ -1,0 +1,18 @@
+﻿@model S1.Models.Autor
+
+@{
+    ViewBag.Title = "Create_A";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create_A</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Imie)
+    @Html.EditorFor(model => model.Imie)
+    @Html.LabelFor(model => model.Nazwisko)
+    @Html.EditorFor(model => model.Nazwisko)
+    @Html.LabelFor(model => model.Data_ur)
+    @Html.EditorFor(model => model.Data_ur)
+    <input type="submit" id="submit" value="Dodaj"/>
+}
