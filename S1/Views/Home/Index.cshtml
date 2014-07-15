@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Data_ur)
             </td>
             <td>
-                @Html.ActionLink("Edytuj", "Edit_A", new { id = item.Id_A }) |
-                @Html.ActionLink("Detale", "Detale_Autora", new { id = item.Id_A}) |
-                @Html.ActionLink("Usun", "Delete_A", new { id = item.Id_A})
+                @Html.ActionLink("Edytuj", "Edit_A", new { id_a = item.Id_A }) |
+                @Html.ActionLink("Detale", "Detale_Autora", new { id_a = item.Id_A}) |
+                @Html.ActionLink("Usun", "Delete_A", new { id_a = item.Id_A})
             </td>
         </tr>
     }

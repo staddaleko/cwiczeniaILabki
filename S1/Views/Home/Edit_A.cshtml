@@ -1,0 +1,53 @@
+﻿@model S1.Models.Autor
+
+@{
+    ViewBag.Title = "Edit_A";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit_A</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Autor</legend>
+
+        @Html.HiddenFor(model => model.Id_A)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Imie)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Imie)
+            @Html.ValidationMessageFor(model => model.Imie)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nazwisko)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nazwisko)
+            @Html.ValidationMessageFor(model => model.Nazwisko)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Data_ur)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Data_ur)
+            @Html.ValidationMessageFor(model => model.Data_ur)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

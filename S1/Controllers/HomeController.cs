@@ -47,13 +47,21 @@ namespace S1.Controllers
             return View("Detale_Autora", a_d);
         }
 
+        public ActionResult Edit_A(int id_a)
+        {
+            //db_A.Autorzy.AddOrUpdate(A);
+            //db_A.SaveChanges();
+            Autor a_e = db_A.Autorzy.Find(id_a);  //autor_edycja
+                            //Autor ten_do_edycji = db_A.Autorzy.Find(id_a);
+            return View("Edit_A", a_e);
+            //return RedirectToAction("Index");
+        }
+
+        [HttpPost]
         public ActionResult Edit_A(Autor A)
         {
             db_A.Autorzy.AddOrUpdate(A);
             db_A.SaveChanges();
-            //Autor a_e = db_A.Autorzy.Find(id_a);  //autor_edycja
-            //Autor ten_do_edycji = db_A.Autorzy.Find(id_a);
-            //return View("Edit_A", a_e);
             return RedirectToAction("Index");
         }
 
